@@ -46,10 +46,7 @@ public class MyAdapter extends PagerAdapter {
         }
         //imageView.setPadding(50,50,50,50);
         imageView.setScaleType(ImageView.ScaleType.FIT_XY);
-        Bitmap bitmap = ImageUtils.drawableToBitmap(context.getDrawable(listId.get(position)));
-        bitmap = ImageUtils.getRoundedCornerBitmap(bitmap,30.0f);
-       imageView.setImageBitmap(bitmap);
-
+        imageView.setImageResource(listId.get(position));
         container.addView(imageView);
         return imageView;
     }
